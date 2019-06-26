@@ -554,7 +554,7 @@ class Search extends \Kitodo\Dlf\Common\AbstractPlugin {
         // Process results.
         foreach ($facet as $field => $values) {
             $entryArray = [];
-            $entryArray['title'] = htmlspecialchars($this->conf['facets'][$field]);
+            $entryArray['title'] = '<span class="tx-dlf-facet-sub-title">'.htmlspecialchars($this->conf['facets'][$field]).'</span>';
             $entryArray['count'] = 0;
             $entryArray['_OVERRIDE_HREF'] = '';
             $entryArray['doNotLinkIt'] = 1;
